@@ -15,9 +15,9 @@ export const metadata = {
   title: "Society Saathi",
   description: "A Next.js project for managing Society Works",
   icons :{
-    icon: "/logo.png", type: "image/png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/S.webp", type: "image/webp",
+    shortcut: "/S.webp",
+    apple: "/S.webp",
   },
   authors :"Vedanta Core <vedantacore@gmail.com",
   license : "MIT",
