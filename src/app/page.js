@@ -2,11 +2,16 @@ import Image from 'next/image';
 
 export default function Home() {
   const sidebar=['Home','Profile','About us','Contact us'];
-
+  
   return (
     <>
     <header className="bg-blue-500 text-white p-4">
-
+      <h1 className="text-2xl font-bold">Bafna Iris Society</h1>
+      <nav>
+        <ul className="flex space-x-4">
+          {sidebar.map((pages,keys)=> <li key={keys} className="hover:underline cursor-pointer">{pages}</li>)}
+        </ul>
+      </nav>
     </header>
     <aside className="w-64 bg-gray-200 p-4">
 
@@ -19,7 +24,7 @@ export default function Home() {
       </p>
     </main>
     <footer>
-
+   
     </footer>
     
     
