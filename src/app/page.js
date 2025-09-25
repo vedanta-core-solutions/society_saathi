@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image';
 import { useState } from 'react';
 export default function Home() {
@@ -12,7 +13,7 @@ export default function Home() {
     <header className="bg-blue-500 text-white p-4">
       <h1 className="text-2xl font-bold">Bafna Iris Society</h1>
       <nav>
-<button className="md:hidden" onClick={toggleSidebar}>☰</button>
+        <button className="md:hidden" onClick={toggleSidebar}>☰</button>
         <ul className="flex space-x-4">
 {sidebar.map((item, index) => (
   <li key={index} className="hover:underline cursor-pointer">{item}</li>
