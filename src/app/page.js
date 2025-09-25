@@ -1,15 +1,22 @@
 import Image from 'next/image';
-
+import { useState } from 'react';
 export default function Home() {
-  const sidebar=['Home','Profile','About us','Contact us'];
-  
+  const sidebar=['Home','Features','Pricing','About Us','Contact'];
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <>
     <header className="bg-blue-500 text-white p-4">
       <h1 className="text-2xl font-bold">Bafna Iris Society</h1>
       <nav>
+<button className="md:hidden" onClick={toggleSidebar}>☰</button>
         <ul className="flex space-x-4">
-          {sidebar.map((pages,keys)=> <li key={keys} className="hover:underline cursor-pointer">{pages}</li>)}
+{sidebar.map((item, index) => (
+  <li key={index} className="hover:underline cursor-pointer">{item}</li>
+))}
         </ul>
       </nav>
     </header>
